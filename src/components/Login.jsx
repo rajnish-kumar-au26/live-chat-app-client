@@ -30,7 +30,7 @@ function Login() {
       };
 
       const response = await axios.post(
-        "http://localhost:8080/user/login/",
+        "https://live-chat-app-backend-mxe2.onrender.com/user/login/",
         data,
         config
       );
@@ -58,7 +58,7 @@ function Login() {
       };
 
       const response = await axios.post(
-        "http://localhost:8080/user/register/",
+        "https://live-chat-app-backend-mxe2.onrender.com/user/register/",
         data,
         config
       );

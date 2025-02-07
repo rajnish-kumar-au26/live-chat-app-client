@@ -11,7 +11,7 @@ import axios from "axios";
 import { myContext } from "./MainContainer";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:8080";
+const ENDPOINT = "https://live-chat-app-backend-mxe2.onrender.com";
 var socket;
 
 function ChatArea() {
@@ -35,7 +35,7 @@ function ChatArea() {
     };
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/message/",
+        "https://live-chat-app-backend-mxe2.onrender.com/message/",
         {
           content: messageContent,
           chatId: chat_id,
@@ -80,7 +80,7 @@ function ChatArea() {
       };
       try {
         const { data } = await axios.get(
-          `http://localhost:8080/message/${chat_id}`,
+          `https://live-chat-app-backend-mxe2.onrender.com/message/${chat_id}`,
           config
         );
         setAllMessages(data);

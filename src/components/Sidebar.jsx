@@ -36,9 +36,11 @@ function Sidebar() {
       },
     };
 
-    axios.get("http://localhost:8080/chat/", config).then((response) => {
-      setConversations(response.data);
-    });
+    axios
+      .get("https://live-chat-app-backend-mxe2.onrender.com/chat/", config)
+      .then((response) => {
+        setConversations(response.data);
+      });
   }, [refresh, user.token]);
 
   const conversationsStyle = {

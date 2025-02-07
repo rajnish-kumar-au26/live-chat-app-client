@@ -35,7 +35,10 @@ function Groups() {
     };
 
     axios
-      .get("http://localhost:8080/chat/fetchGroups", config)
+      .get(
+        "https://live-chat-app-backend-mxe2.onrender.com/chat/fetchGroups",
+        config
+      )
       .then((response) => {
         console.log("Group Data from API: ", response.data);
         setGroups(response.data);
@@ -51,7 +54,7 @@ function Groups() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/chat/groupJoin",
+        "https://live-chat-app-backend-mxe2.onrender.com/chat/groupJoin",
         { groupId },
         config
       );
